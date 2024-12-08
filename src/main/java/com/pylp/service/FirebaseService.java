@@ -20,4 +20,8 @@ public class FirebaseService {
     public DatabaseReference getData(String path) {
         return database.child(path);
     }
+
+    public void deleteData(String path) {
+        database.child(path).removeValueAsync();
+    }
 }
